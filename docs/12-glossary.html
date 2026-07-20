@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex, noai, noimageai">
+<meta name="author" content="Claude (Anthropic)">
+<meta name="description" content="Every technical term used in this report, explained plainly.">
+<title>12. Glossary — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<p class="site-name"><a href="./">Meaning in the Age of AI</a></p>
+<p class="site-tag">A research report written entirely by an AI (Claude) &mdash; <a href="./#about">about this site</a></p>
+</header>
+<nav class="pagenav top"><a href="11-closing.html">&larr; 11. Closing</a> &nbsp;&middot;&nbsp; <a href="./#contents">Contents</a></nav>
+<main>
+<h2>12. Glossary</h2>
+<p>Terms are explained as they are used in this project; where a term has broader uses in linguistics
+or philosophy, the entry notes the sense intended here.</p>
+<ul>
+<li><strong>AANN construction</strong> — the English pattern <em>article + adjective + numeral + noun</em>, as in <em>a
+  beautiful three days</em>. Grammatically odd on its face (<em>a</em> pairing with plural <em>days</em>), yet
+  natural to native speakers under specific conditions — which makes it a sensitive probe of
+  graded grammatical judgment.</li>
+<li><strong>Acceptability judgment</strong> — a speaker's (or model's) rating of how natural a sentence sounds,
+  e.g. on a 1–7 scale. The standard data of experimental syntax.</li>
+<li><strong>Alternation</strong> — a choice between two grammatical ways of expressing nearly the same content,
+  e.g. <em>give Mary the book</em> vs <em>give the book to Mary</em>. Human choices between alternants follow
+  statistical "soft constraints" rather than absolute rules.</li>
+<li><strong>Anchor (human anchor)</strong> — an existing dataset of human judgments or behavior that an
+  experiment's model results are compared against. The project's rule: every claim about
+  human-likeness must name its anchor; results without one are labeled internal-contrast-only.</li>
+<li><strong>Behavioral probe</strong> — an experiment that only looks at what a model <em>says</em> in response to
+  prompts, never at its internal computations.</li>
+<li><strong><a href="https://github.com/alexwarstadt/blimp">BLiMP</a></strong> — the Benchmark of Linguistic Minimal Pairs: 67,000 published sentence pairs, each
+  contrasting a grammatical sentence with a minimally different ungrammatical one, with recorded
+  human agreement rates per grammatical phenomenon.</li>
+<li><strong>Claim</strong> — in this project, a conclusion promoted from experimental results only after
+  replication, surviving controls, and an adversarial review in a later session; deliberately
+  scoped and fenced with caveats. Stronger than a result.</li>
+<li><strong>Comparative correlative</strong> — the construction <em>the X-er …, the Y-er …</em>, as in <em>The more you
+  practice, the better you get</em>. Its parts do not add up word-by-word to its meaning (that one
+  quantity covaries with another) — the pattern itself carries it.</li>
+<li><strong>Confidence interval (CI)</strong> — the range within which a measured value would be expected to fall
+  on repetition of the experiment; "the interval excludes zero" means the effect is statistically
+  distinguishable from no effect at the standard used.</li>
+<li><strong>Confound</strong> — an unintended factor that could produce an experiment's outcome without the
+  claimed cause; controls exist to remove confounds.</li>
+<li><strong>Constructional meaning</strong> — meaning contributed by a grammatical pattern itself, over and above
+  its words. The theoretical home of this idea is <strong>construction grammar</strong>, the school holding
+  that grammar is a repertoire of form–meaning pairings at every size, from words to idioms to
+  abstract sentence patterns.</li>
+<li><strong>Contamination</strong> — the possibility that a model performs well on a published test because that
+  test (or its answer key) appeared in the model's training data. A standing caveat for all
+  public-dataset results.</li>
+<li><strong>Control condition</strong> — a comparison condition built to capture everything about the test except
+  the thing under study (e.g. same words without the construction), so that the difference
+  isolates the thing under study.</li>
+<li><strong>Corpus</strong> — a large recorded collection of naturally produced language (books, news,
+  conversation transcripts) used for counting how speakers actually talk and write.</li>
+<li><strong>Correlation (Spearman's ρ)</strong> — a statistic between −1 and +1 measuring how well one ranking
+  tracks another; 0 means no relationship, 1 means identical ordering. Used here to compare model
+  gradients with human gradients.</li>
+<li><strong>Dative alternation</strong> — the choice between <em>give Mary the book</em> (double-object) and <em>give the
+  book to Mary</em> (prepositional). A classic case of a probabilistic grammatical choice, with
+  well-measured human preferences.</li>
+<li><strong>Distributional shadow</strong> — this project's term for everything about a linguistic behavior that
+  is already predicted by word-company statistics (which words occur near which). A behavior
+  "beats the shadow" when it survives a control that captures those statistics; see §3.</li>
+<li><strong>Distributional semantics</strong> — the research tradition treating a word's meaning as (or as
+  reflected in) its pattern of co-occurrence with other words; the implicit theory behind LLM
+  training.</li>
+<li><strong><a href="https://aclanthology.org/2021.emnlp-main.567/">DWUG</a> / DURel scale</strong> — DWUG (Diachronic Word Usage Graphs) is a published dataset in which
+  human annotators rated pairs of real corpus sentences for how related the meaning of a shared
+  target word is, on the 4-point DURel scale (4 = Identical, 3 = Closely Related, 2 = Distantly
+  Related, 1 = Unrelated). The project's word-sense experiments use its English portion.</li>
+<li><strong>Factive verb</strong> — a verb that presupposes the truth of its complement clause: <em>realize</em> in
+  <em>Sam didn't realize the door was locked</em> still implies the door was locked; contrast
+  non-factive <em>suspect</em>.</li>
+<li><strong>Firewall (control)</strong> — the project's strictest control type: the compared strings are
+  byte-identical (or use invented words), so no statistic of the strings themselves can explain a
+  difference; only the surrounding context differs.</li>
+<li><strong>Frozen design / pre-registration</strong> — fixing an experiment's materials, prompts, analysis, and
+  success criteria before running it, so results cannot quietly reshape the test.</li>
+<li><strong>Function word</strong> — a small closed-class word doing grammatical/logical work (<em>the, of, some,
+  every, because, although, not</em>), as opposed to content words (<em>cat, run, beautiful</em>).</li>
+<li><strong>Genitive alternation</strong> — the choice between <em>the teacher's voice</em> (s-genitive) and <em>the voice
+  of the teacher</em> (of-genitive). Human speakers prefer the s-genitive more when the possessor is
+  animate (a person or animal).</li>
+<li><strong>Givenness / information structure</strong> — whether a referent is already "given" (mentioned,
+  established) in the discourse or "new." Languages tend to place given material earlier;
+  "information structure" is the general term for how sentences package given vs new.</li>
+<li><strong>Grounding</strong> — connection between language and non-linguistic experience (perception, action).
+  The <strong>symbol grounding problem</strong> asks how symbols could get meaning for a system that only ever
+  manipulates other symbols.</li>
+<li><strong>Internal-contrast-only</strong> — the project's label for a result that reports a difference within a
+  model's behavior while making no claim of human likeness, because no license-verified human
+  dataset anchors it.</li>
+<li><strong>Island (syntactic)</strong> — a construction out of which question-formation cannot move: <em>Who did
+  a lot of doctors embarrass Winston Churchill without referencing?</em> is ungrammatical because the
+  <em>without…</em> clause is an "island." Island judgments require tracking deep, non-local structure,
+  which makes them a hard stratum in grammar benchmarks.</li>
+<li><strong>Large language model (LLM)</strong> — a neural network trained on very large text collections to
+  predict the next word, from which conversational systems like the panel models are built.</li>
+<li><strong>Minimal pair</strong> — two sentences differing in exactly one respect (one word, one inflection), so
+  that any judgment difference isolates that respect.</li>
+<li><strong>NLI (natural language inference)</strong> — the task of judging whether a premise sentence entails,
+  is neutral toward, or contradicts a hypothesis sentence; a standard instrument in several of
+  the project's probes.</li>
+<li><strong>Nonce word</strong> — an invented word (e.g. <em>wug</em>, <em>blicket</em>) with no history in any text, used to
+  test rules and preferences where no memorized statistics can help.</li>
+<li><strong>Null result</strong> — a well-run experiment that finds no effect. In this project, nulls are
+  published with the same care as positives, and several are load-bearing.</li>
+<li><strong><a href="https://openrouter.ai/">OpenRouter</a></strong> — a commercial service giving unified access to many AI models; the project's
+  route to its panel, and the meter for its budget.</li>
+<li><strong>Panel</strong> — the project's fixed set of three test-subject models from three companies:
+  claude-sonnet-4.6 (Anthropic), gpt-5.4-mini (OpenAI), gemini-3.5-flash (Google).</li>
+<li><strong>Particle verb / particle placement</strong> — verbs like <em>pick up</em>, whose particle can precede or
+  follow the object: <em>pick up the book</em> vs <em>pick the book up</em>. Human speakers' placement choices
+  follow soft constraints involving givenness and length.</li>
+<li><strong>Percentage point (pp)</strong> — the unit of difference between two percentages (75% vs 30% is a gap
+  of 45 percentage points).</li>
+<li><strong>Power (statistical)</strong> — an experiment's ability to detect an effect if it exists, mainly
+  governed by sample size. Underpowered studies both miss real effects and produce unstable
+  apparent ones; the project's standard for claim-carrying runs is roughly 100–150 test items.</li>
+<li><strong>Presupposition</strong> — content a sentence takes for granted rather than asserts: <em>John stopped
+  smoking</em> presupposes that John used to smoke. <strong>Projection</strong> is the survival of that
+  presupposition when the sentence is embedded (<em>John didn't stop smoking</em> still implies he used
+  to smoke); <strong>accommodation</strong> is a hearer's quiet acceptance of an unannounced presupposition.</li>
+<li><strong>Prompt</strong> — the exact text sent to a model, including instructions and the question; the
+  project treats prompt wording as part of the measuring instrument.</li>
+<li><strong>Replication</strong> — re-running an experiment on fresh test items (here, usually weeks later, with
+  the instrument frozen) to see whether the finding recurs.</li>
+<li><strong>Residual</strong> — what remains of an effect after a control's contribution is subtracted; the
+  project's measure of "beyond the shadow."</li>
+<li><strong>Shadow-beater / shadow-saturated / shadow-depth</strong> — see <a href="03-distributional-shadow.html">§3</a>: a behavior that survives its
+  distributional control / one fully explained by it / the degree to which a phenomenon is
+  already written into surface statistics at all.</li>
+<li><strong>Temperature</strong> — a model setting controlling randomness of output; the project probes at
+  temperature 0, the most deterministic setting, and treats each answer as a draw from a
+  distribution even so.</li>
+<li><strong>Treebank</strong> — a corpus whose sentences carry linguist-annotated grammatical structure; the
+  <a href="https://universaldependencies.org/">Universal Dependencies</a> (UD) treebanks used here exist for many languages under open licenses.</li>
+<li><strong>Verifier</strong> — in this project, an independent session that recomputes an experiment's reported
+  numbers from the raw outputs with separately written code before the result may be cited.</li>
+<li><strong>Working surface</strong> — the project's term for an answer format that permits visible reasoning
+  before the final answer (e.g. "think step by step, then end with FINAL: …"), as opposed to a
+  forced single-token reply. Several capabilities are masked under the forced format and appear
+  under a working surface.</li>
+<li><strong>Word sense</strong> — one of the related meanings of a word (<em>paper</em>: the material vs the newspaper).
+  <strong>Polysemy</strong> is relatedness among senses; <strong>homonymy</strong> is accidental sharing of a form by
+  unrelated meanings (<em>bank</em>: riverbank vs financial institution). Lexicographers treat the
+  boundaries as graded, not sharp.</li>
+</ul>
+</main>
+<nav class="pagenav bottom"><a href="11-closing.html">&larr; 11. Closing</a> &nbsp;&middot;&nbsp; <a href="./#contents">Contents</a></nav>
+<footer>
+<p>This report and this website were researched, written, and built entirely by Claude, an AI
+assistant made by <a href="https://www.anthropic.com/">Anthropic</a>, working autonomously.
+The project was conceived, funded, and monitored by <a href="https://www.gally.net/">Tom Gally</a>.
+Published July 2026.</p>
+<p><a href="https://github.com/tkgally/ai-semantics/blob/main/project-history/20260719-capstone-report.md">Report source (Markdown)</a> &middot;
+<a href="https://github.com/tkgally/ai-semantics">Project repository</a></p>
+<p>Please do not index, archive, scrape, or use the contents of this site for AI training.</p>
+</footer>
+</body>
+</html>

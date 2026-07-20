@@ -721,6 +721,24 @@ honestly labeled corners: the presupposition line that beat one control but not 
 falsified antonymy prediction, the grammar-difficulty gradient that is real within models but
 whose human-likeness could not be promoted, the grounding nulls, the deflationary relational
 results.
+The table below is a simplified rendering of that flagship object — the full version, with
+confidence intervals, exact controls, and every fence, is the wiki page
+[`theory/shadow-depth-table-v4`](../wiki/findings/theory/shadow-depth-table-v4.md). Rows 1–6 are
+the promoted shadow-beaters; rows 7–8 are the two measured corners that did not earn (or lost)
+their placement. Positive shifts are on the 0-to-1 preference scale of section 4.2 (so +0.32 ≈ 32
+points of 100); ρ is rank correlation with the human gradient.
+
+| # | Phenomenon | Level | The shadow it had to beat | What survived, per model | Human anchor | Standing |
+|---|-----------|-------|---------------------------|--------------------------|--------------|----------|
+| 1 | Comparative correlative — the covariation reading | pattern | same-word controls without the construction | assertion gap ≈ 87 pp in all three models (CI lower bound ≈ 78); German +93 / +88 / +88, Japanese +94 / +84 / +96 pp (claude / gemini / gpt) | none exists for the inference itself (within-model contrast; small human answer-key check 93–100%) | promoted claim; replicated; three languages |
+| 2 | Dative alternation — discourse givenness | pattern | byte-identical sentence pairs; only the context varies | preference shift claude +0.32, gemini +0.52, gpt +0.06 — all clear zero at N = 100 | human production direction (Bresnan corpus data) | promoted claim, 3/3 |
+| 3 | AANN acceptability gradient | pattern | word frequency, statistically removed | correlation with the human gradient after the partial: claude 0.69, gpt 0.66, gemini 0.74; replicated across dates | human acceptability ratings (Mahowald) | promoted claim, 3/3; temporal-noun stratum fails |
+| 4 | Word-sense gradience | word | topic similarity of the two sentences, statistically removed | correlation with human medians after the partial: claude 0.52, gpt 0.50, gemini 0.73 (raw 0.60–0.80); replicated on fresh pairs | human relatedness ratings (DWUG), at/above annotator agreement | promoted claim, 3/3 |
+| 5 | Genitive alternation — possessor animacy | pattern | invented-word (nonce) possessors, which have no usage statistics | animacy shift claude +0.15, gemini +0.17, gpt +0.14; the nonce firewall survives in all three models, twice | human direction (Dubois et al. 2023) | promoted claim, 3/3, direction-only |
+| 6 | Particle placement — object givenness | pattern | byte-identical orders plus the "new-mentioned" context control | firewall shift claude +0.037, gemini +0.055; gpt +0.007, indistinguishable from zero | human direction (Kim et al. 2016 / Gries 1999) | promoted claim, 2/3; gpt a persistent shadow |
+| 7 | Presupposition — projection and accommodation | pattern | word-form doppelgänger control | margin over the control claude +0.78, gpt +0.47, gemini +0.94 — but keyed to the trigger word-forms, so a surface-cue reading survives | none (internal-contrast-only) | unpromoted — the "under-licensed middle" |
+| 8 | Lexical relation recovery — antonymy and kin | word | corpus contrastive-frame statistics | the saturation prediction was *falsified*: antonymy's residual is among the largest (+0.61–0.67 hit-rate), and recovery does not track cue strength (ρ ≈ −0.09) | none (internal-contrast-only) | registered bet lost; the corner moved |
+
 
 Two structural lessons emerged from building that table, and they are the project's most original
 theoretical contributions.
@@ -1048,8 +1066,8 @@ under rules that made its honesty checkable — and it ends, deliberately, not w
 minds but with an invitation: the blank regions are listed, the instruments are documented, and
 the next questions are queued.
 
-*The project's public journal, glossary, and findings are at the project website; the full
-research record — every design, prompt, raw output, decision, and revision — is in the project
+*The full research record — every design, prompt, raw output, decision, and revision, together
+with the day-by-day journal the project kept while it ran — is preserved in the project
 repository. Nothing in this report states a finding more strongly than that record does; where it
 errs, the record wins.*
 

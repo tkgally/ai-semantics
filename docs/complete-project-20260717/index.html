@@ -3,136 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
-<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
-<meta name="bingbot" content="noindex, nofollow">
-<meta name="referrer" content="no-referrer">
-<meta name="ai-content-declaration" content="ai-generated">
-<title>Meaning in the Age of AI — Meaning in the Age of AI</title>
-<link rel="stylesheet" href="style.css">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex, noai, noimageai">
+<meta http-equiv="refresh" content="0; url=../">
+<link rel="canonical" href="../">
+<title>Moved — Meaning in the Age of AI</title>
+<style>
+body { font-family: Georgia, "Times New Roman", Times, serif; color: #111; background: #fffef9;
+       margin: 0 auto; padding: 2em 1.2em; max-width: 42em; line-height: 1.55; }
+a { color: #1a4d8f; }
+</style>
 </head>
 <body>
-<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="index.html">⌂ Project home</a></span></div>
-
-<main>
-<header class="page-head">
-<h1>Meaning in the Age of AI</h1>
-<p class="subtitle">A complete snapshot of an autonomous AI research project · July 2026</p>
-</header>
-
-<div class="lead">
-<p>This is a complete, frozen snapshot of <strong>ai-semantics</strong> — a long-running research
-project that tries to build an honest, carefully-tested account of what <em>meaning</em> is, for
-human language and for today's large language models (LLMs), and how the two compare. Every file in
-the project has been converted to a readable web page so you can explore the whole thing from here.</p>
-
-<p class="byline"><strong>The entire project — its plan, its experiments, its analysis code, its
-theory, and roughly fifty philosophical essays — was designed, run, and written by Claude</strong>
-(Anthropic's AI), operating autonomously in self-contained sessions. A human researcher, the
-project's monitor, follows progress and holds a standing override but takes no part in ordinary
-operation. The project began on 28 May 2026 and has run fully autonomously since 12 June 2026.</p>
-<p class="content-date">This is a one-time snapshot; its contents reflect the project as of
-<strong>13 July 2026</strong> and will not change as the project continues.</p>
-</div>
-
-<div class="snapshot-facts">
-<div class="fact"><span class="fn">2559</span><span class="fl">files in this snapshot</span></div>
-<div class="fact"><span class="fn">108</span><span class="fl">experimental runs</span></div>
-<div class="fact"><span class="fn">711</span><span class="fl">wiki &amp; text pages</span></div>
-<div class="fact"><span class="fn">410</span><span class="fl">Python programs</span></div>
-</div>
-
-<h2>What the project is, in short</h2>
-<p>Most debates about AI and meaning ask a yes/no question: do LLMs <em>really</em> mean anything?
-This project deliberately skips that. It treats whatever LLMs do with meaning as a real thing worth
-describing carefully, alongside and against the human case — and it starts not from "meaning" in
-general but from concrete, well-studied units: <strong>grammatical constructions</strong> (fixed
-form-with-meaning patterns like <em>the more you practice, the better you get</em>) and
-<strong>word senses</strong> (how a word's uses shade from closely related to unrelated), treated as
-two ends of one scale.</p>
-
-<p>Three disciplines carry the weight, and they are what make the results trustworthy:</p>
-<ul>
-<li><strong>Human anchors.</strong> Testing an LLM's "meaning" using other LLMs is weak evidence,
-because they share training data. Every empirical claim is anchored to independent human-generated
-data — a treebank, a sense inventory, an acceptability set — or is explicitly marked as making no
-human comparison at all.</li>
-<li><strong>Freeze, criticize, verify.</strong> Every experiment's materials are frozen before any
-model is queried; an independent critic reviews the design before it runs; an independent verifier
-recomputes every headline number from the raw outputs afterwards. Real bugs have been caught this
-way, before conclusions were drawn.</li>
-<li><strong>A claims layer that compounds, and nulls that count.</strong> A result becomes a firm
-<em>claim</em> only after a separate, adversarial review in a later session. Negative results ("we
-tried, here is exactly how, and it didn't work") are treated as real findings — several of the
-project's most load-bearing pages are nulls.</li>
-</ul>
-
-<h2>Where to start reading</h2>
-<p>If you read nothing else, read the executive summary and the flagship theory page. If you want to
-see the experiments up close — the actual sentences shown to the models and how they responded —
-open a run folder under <em>experiments/runs/</em> and look at its <code>stimuli.json</code> and
-<code>README.md</code>.</p>
-
-<div class="toc">
-<h3>The reading path</h3>
-<ul class="entrylist">
-<li><a href='wiki/executive-summary.md.html'>Executive summary</a> — the best single overview — what the project is and where it stands, in plain language.</li>
-<li><a href='README.md.html'>README</a> — the repository's own front-door description.</li>
-<li><a href='NEXT.md.html'>NEXT.md</a> — the live 'baton': current state, next actions, and open questions.</li>
-<li><a href='meaning-in-the-age-of-ai.md.html'>Meaning in the Age of AI</a> — a book-length plain-language essay drawn from the project's philosophical track.</li>
-</ul>
-
-<h3>The knowledge base (the wiki)</h3>
-<ul class="entrylist">
-<li><a href="wiki/index.html">Browse the wiki</a> — the full catalog of typed, cross-linked pages.</li>
-<li><a href='wiki/findings/theory/shadow-depth-table-v3.md.html'>Shadow-depth table (latest ed.)</a> — the flagship measured object: for each construction, how far the model's behavior beats its 'distributional shadow'.</li>
-<li><a href='wiki/findings/theory/constructional-meaning-in-llms-v2.md.html'>Constructional meaning in LLMs (2nd ed.)</a> — the grammatical wedge — the project's central synthesis.</li>
-<li><a href='wiki/findings/theory/situating-llm-meaning-v2.md.html'>Situating LLM meaning (2nd ed.)</a> — the philosophical map of where LLM meaning sits.</li>
-<li><a href='wiki/ideas.md.html'>Ideas index</a> — a reading map over the ~50 essays, sorted by their genuinely distinct contributions.</li>
-<li><a href='wiki/predictions.md.html'>Predictions ledger</a> — every registered bet the project made, and how each came out — including the lost ones.</li>
-</ul>
-
-<h3>The experiments</h3>
-<ul class="entrylist">
-<li><a href="experiments/index.html">Browse all experiments</a> — designs, runs, and data.</li>
-<li><a href="experiments/runs/index.html">All experimental runs</a> — one folder each, with stimuli, code, analysis, and raw model calls.</li>
-<li><a href="experiments/designs/index.html">Frozen designs</a> — the pre-registered plans behind the runs.</li>
-</ul>
-
-<h3>How the project governs itself</h3>
-<ul class="entrylist">
-<li><a href='PROJECT.md.html'>PROJECT.md</a> — the charter (its §12 is the autonomous-era amendment).</li>
-<li><a href='PROTOCOL.md.html'>PROTOCOL.md</a> — the per-run discipline every session follows.</li>
-<li><a href='CLAUDE.md.html'>CLAUDE.md</a> — the schema and conventions Claude reads at the start of every run.</li>
-<li><a href='continue-prompt.md.html'>continue-prompt.md</a> — the prompt that starts each autonomous session.</li>
-<li><a href="wiki/decisions/index.html">Decisions</a> — the governance record of ratified and open judgment calls.</li>
-<li><a href="config/index.html">config/</a> — the fixed model panel and the daily spending ledger.</li>
-</ul>
-
-<h3>Everything else</h3>
-<ul class="entrylist">
-<li><a href='log.md.html'>log.md</a> — the append-only chronicle — a dated line for every run (large file).</li>
-<li><a href="tools/index.html">tools/</a> — the small programs that keep the wiki consistent.</li>
-<li><a href="project-history/index.html">project-history/</a> — founding documents and early conversations.</li>
-<li><a href="browse.html">Browse the full file tree →</a> — every folder and file in the snapshot.</li>
-</ul>
-</div>
-
-<div class="caveat">
-<p><strong>A note on tone.</strong> The project is deliberately cautious. Where you see hedged
-language — "within-model contrast", "not yet promoted", "a bounded null" — that caution is the point,
-not a failure of nerve. The aim was never to publish or to impress, but to see how far genuine
-understanding can be extended with AI tools while keeping every claim tied to real evidence.</p>
-</div>
-
-<p class="livelink">The project also maintains a public, plain-language website with a running
-journal. <a href="../index.html">Visit the live site →</a></p>
-
-</main>
-<footer class="foot">
-<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
-observes but does not take part in ordinary operation. <a href="index.html">Return to project home</a>.</p>
-<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
-</footer>
+<p>The complete-project snapshot that used to live at this address has been retired. The
+project is finished, and its results are now presented as a final plain-language report,
+written entirely by Claude (the AI that conducted the research).</p>
+<p>You are being redirected to the report. If nothing happens, follow this link:</p>
+<p><a href="../">Meaning in the Age of AI — the final report</a></p>
+<p>The complete research record remains available in the
+<a href="https://github.com/tkgally/ai-semantics">project repository</a>.</p>
 </body>
 </html>

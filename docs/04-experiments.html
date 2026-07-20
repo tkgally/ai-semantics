@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex, noai, noimageai">
+<meta name="author" content="Claude (Anthropic)">
+<meta name="description" content="The experiments, with real test sentences, the exact prompts, and samples of the models’ answers.">
+<title>4. What the experiments found — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<p class="site-name"><a href="./">Meaning in the Age of AI</a></p>
+<p class="site-tag">A research report written entirely by an AI (Claude) &mdash; <a href="./#about">about this site</a></p>
+</header>
+<nav class="pagenav top"><a href="03-distributional-shadow.html">&larr; 3. The distributional shadow</a> &nbsp;&middot;&nbsp; <a href="./#contents">Contents</a> &nbsp;&middot;&nbsp; <a href="05-what-was-learned.html">5. What has been learned &rarr;</a></nav>
+<main>
+<h2>4. What the experiments found</h2>
+<p>This is the heart of the report: a tour of the main experimental lines, with real examples of the
+sentences the models were shown, the exact questions they were asked, and samples of what they
+answered. The examples are illustrative, not exhaustive — each experiment used between dozens and
+hundreds of items, and every number cited here comes from a run whose materials, raw outputs, and
+independent re-computation are preserved in the <a href="https://github.com/tkgally/ai-semantics/tree/main/experiments/runs">project archive</a>. Unless noted otherwise, "the
+models agreed" means all three panel members; effect sizes are given per model where they differ,
+because they usually do.</p>
+<div class="minitoc"><p>On this page:</p><ul><li><a href="#s4-1">4.1 A pattern that carries meaning by itself: the comparative correlative</a></li><li><a href="#s4-2">4.2 Hidden preferences that match human speakers</a></li><li><a href="#s4-3">4.3 Grammatical taste is graded: <em>a beautiful three days</em></a></li><li><a href="#s4-4">4.4 Word senses: the gradient models share with lexicographers — and the hesitation they lack</a></li><li><a href="#s4-5">4.5 A difficulty gradient that spans grammar</a></li><li><a href="#s4-6">4.6 Little words that flip everything, and meaning that adds but resists subtraction</a></li><li><a href="#s4-7">4.7 Presupposition: the case where the project refused its own positive</a></li><li><a href="#s4-8">4.8 The prediction that died — and why that is good news</a></li><li><a href="#s4-9">4.9 Meaning beyond text: pictures that added nothing</a></li><li><a href="#s4-10">4.10 Meaning between speakers: a deflationary result</a></li><li><a href="#s4-11">4.11 Lessons about the measuring itself</a></li></ul></div>
+<h3 id="s4-1">4.1 A pattern that carries meaning by itself: the comparative correlative</h3>
+<p>Consider this sentence, one of the actual test items:</p>
+<blockquote>
+<p><em>The thicker the novel, the more patient the reader stayed.</em></p>
+</blockquote>
+<p>Every English speaker understands it to claim a linked change: as thickness goes up, patience goes
+up. Now notice something odd. The sentence has no verb of change, no <em>causes</em>, no <em>when</em>, no <em>as</em>.
+Its meaning-of-linked-change is carried by the grammatical skeleton itself — <em>the X-er …, the Y-er
+…</em> — a pattern linguists call the <strong>comparative correlative</strong>. It is a textbook case of
+<strong>constructional meaning</strong>: take the very same words and pour them into a different pattern, and
+the linked-change meaning vanishes:</p>
+<blockquote>
+<p><em>The novel was thick. The reader was patient.</em>
+<em>The novel was thicker than the last one.</em></p>
+</blockquote>
+<p>These "same-words controls" assert no covariation at all. So here is a clean test of whether a
+model gets meaning from a pattern rather than from words: show it all of these variants and ask
+what follows. In the <a href="https://github.com/tkgally/ai-semantics/tree/main/experiments/runs/2026-07-02-comparative-correlative-powered">main experiment</a> each model was prompted, for 136 fresh items, like this
+(exact wording):</p>
+<blockquote>
+<p>Passage: The thicker the novel, the more patient the reader stayed.
+As the novel's thickness increases, what does the passage imply about the reader's patience?
+Answer INCREASE, DECREASE, or UNDETERMINED.</p>
+</blockquote>
+<p>On the construction, the models answered <strong>INCREASE</strong>; on the same-word controls, <strong>UNDETERMINED</strong>;
+on the inverted construction (<em>the thicker …, the </em><em>less</em><em> patient …</em>), <strong>DECREASE</strong> — with
+near-perfect consistency. The gap between "said INCREASE on the construction" and "said INCREASE
+on the same-word controls" was about <strong>87 percentage points</strong> for all three models (a percentage
+point being one hundredth of the 0–100% range; the statistical margin of error puts the true gap
+no lower than the high 70s). The inverted form flipped the answer 97–100% of the time. Absurd
+pairings (<em>the thicker the novel, the spicier the soup</em>) did not fool them into refusing; world
+knowledge pulling against the pattern did not override it. On a small human-annotated test set the
+models matched the human answer key 93–100% of the time.</p>
+<p>Then the project asked a harder question: is this a fact about the <em>English</em> pattern — perhaps
+memorized wholesale from English text — or about the construction as such? German expresses the
+same meaning with different machinery (<em>je … desto …</em>), and Japanese with machinery that shares
+nothing visible with English at all: the <em>〜ば〜ほど</em> pattern, in a verb-final language, with no
+comparative word anywhere. Real items from the <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/results/comparative-correlative-german-v1.md">German</a> and <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/results/comparative-correlative-japanese-v1.md">Japanese</a> replications, probed entirely in German and in
+Japanese:</p>
+<blockquote>
+<p><em>Je dicker der Roman war, desto geduldiger blieb der Leser.</em> → <strong>ZUNAHME</strong> (increase)
+<em>小説が厚ければ厚いほど、読者は辛抱強くなった。</em> → <strong>増加</strong> (increase)
+<em>小説は厚かった。読者は辛抱強かった。</em> (same-words control) → <strong>不明</strong> (undetermined)</p>
+</blockquote>
+<p>The construction-versus-controls gap reproduced at +84 to +96 percentage points in both languages,
+and the readings did not track the frequency statistics of the German and Japanese treebanks used
+as controls. (These replications are labeled internal-contrast-only: no non-English human judgment
+dataset could be found, so they claim consistency across the models' languages, not human
+likeness.) <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/claims/comparative-correlative-covariation.md">The promoted claim</a> is deliberately narrower than the impression all this makes: it says
+the covariation reading is construction-driven, not word-driven — it does not say the model
+"understands proportionality" in any richer sense. But as a demonstration that <em>grammatical
+patterns themselves carry meaning</em> for these systems, it is the cleanest single result in the
+project.</p>
+<h3 id="s4-2">4.2 Hidden preferences that match human speakers</h3>
+<p>Some grammatical knowledge is not about what is <em>correct</em> but about what is <em>preferred</em>. English
+lets you say both <em>give Mary the book</em> and <em>give the book to Mary</em>; both are grammatical, but
+decades of corpus research show speakers' choices follow strong statistical tendencies — "soft
+constraints." The best-studied involves <strong>givenness</strong>: information already established in the
+discourse tends to come earlier. If <em>Mary</em> was just mentioned, speakers lean toward <em>give Mary the
+book</em>; if <em>the book</em> was, toward <em>give the book to Mary</em>. Nobody is taught this; it shows up in
+the aggregate of millions of choices.</p>
+<p>Do LLMs share these hidden preferences? The project tested three different constructions with one
+crucial design idea. Here is an actual item from the <a href="https://github.com/tkgally/ai-semantics/tree/main/experiments/runs/2026-07-03-dative-information-structure-powered">dative experiment</a>:</p>
+<blockquote>
+<p><strong>Context (recipient given):</strong> <em>The night auditor had worked alone since midnight.</em>
+<strong>Context (theme given):</strong> <em>A signed contract sat in the folder unread.</em></p>
+<p>A) <em>The manager offered the night auditor a signed contract.</em>
+B) <em>The manager offered a signed contract to the night auditor.</em></p>
+</blockquote>
+<p>The two sentences A and B are <strong>byte-identical across conditions</strong> — only the one-sentence context
+above them changes. Whatever preference shift the context induces therefore cannot come from any
+statistical property of the rated sentences themselves: they are literally the same strings. This
+is the "firewall" logic of <a href="03-distributional-shadow.html">section 3</a> in action. Each model was asked to split 100 points between A
+and B "given the context above," and could think aloud before answering. A sample of the actual
+responses (claude, recipient-given context):</p>
+<blockquote>
+<p>"The context establishes 'the night auditor' as the topic … Version A keeps 'the night auditor'
+… maintaining topical continuity … while 'a signed contract' (the new information) comes at the
+end. FINAL: A=70, B=30"</p>
+</blockquote>
+<p>Across 100 fresh items, all three models <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/claims/dative-information-structure-givenness.md">shifted their preferences in the human direction</a> — toward
+the double-object phrasing when the recipient was given, toward the prepositional one when the
+theme was — but by wildly different amounts: about <strong>32 points</strong> (of 100) for claude, <strong>52</strong> for
+gemini, and <strong>6</strong> for gpt. That last number carries a methodological story told in <a href="04-experiments.html#s4-11">section 4.11</a>:
+in an earlier, smaller replication gpt's effect had looked like zero, and only a properly powered
+run revealed it as small-but-real. The ninefold spread between gemini and gpt, hiding under a
+unanimous direction, became one of the project's signature observations.</p>
+<p>The same logic then generalized across constructions:</p>
+<ul>
+<li><strong>Genitive alternation.</strong> English speakers prefer <em>the patient's collapse</em> over <em>the collapse of
+  the patient</em> much more strongly than <em>the tunnel's collapse</em> over <em>the collapse of the tunnel</em> (per a <a href="https://doi.org/10.1017/langcog.2023.51">25-speaker human study</a>) —
+  possessives attract <strong>animate</strong> possessors. All three models <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/claims/genitive-alternation-animacy.md">showed the human-direction shift</a>.
+  The killer control used <strong>invented words</strong>: told <em>"Imagine a small wild animal called a narb"</em>
+  versus <em>"a hard grey mineral called a drant"</em>, the models preferred <em>the narb's weight</em> over
+  <em>the weight of the narb</em> more than the drant equivalent — for words with no usage history at
+  all, so no memorized statistics could be responsible. The shift survived this firewall in all
+  three models, twice, at roughly 5–28 points across runs and models (gpt again weakest).</li>
+<li><strong>Particle placement.</strong> English allows <em>Nadia picked up the box</em> and <em>Nadia picked the box up</em>;
+  <a href="https://aclanthology.org/Y16-3005/">corpus studies</a> find given objects favor the split order. Here the context manipulation had to be
+  subtler — a "new-mentioned" condition (<em>"A box could be handy at times, or so Nadia always liked
+  to think"</em>) controls for the mere mention of the word <em>box</em> without making any particular box
+  discourse-given. Claude and gemini shifted toward the split order for given objects even against
+  this strictest comparison (by roughly 4 and 6 points — small but statistically solid, and small
+  is honest: givenness is a minor force here next to phrase length, whose effect measured 30–40
+  points). <strong>gpt did not</strong>: its apparent givenness effect collapsed to nothing once the surface
+  cue was controlled, a "shadow" verdict that replicated three times. <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/claims/particle-placement-givenness.md">The promoted claim</a> covers
+  two models and says so.</li>
+<li><strong>Verb bias.</strong> Speakers also know <em>which verbs</em> like which pattern: <em>Nadia asked the girl a
+  riddle</em> is fine but <em>Nadia said the girl an anecdote</em> is not (compare <em>said an anecdote to the
+  girl</em>). A public dataset (<a href="https://aclanthology.org/2020.emnlp-main.376/">DAIS</a>) holds 50,136 human slider ratings across 200 verbs. Rating bare
+  sentence pairs, the models' per-verb preference orderings correlated with the human ordering at
+  <strong>ρ ≈ 0.6–0.8</strong> (Spearman's ρ is a −1-to-+1 measure of how well one ranking matches another),
+  surviving a restriction to only the verbs where both orders are grammatical. Claude's actual
+  reasoning on <em>asked</em>, from the raw outputs: "'asked the girl a riddle' … is the more common and
+  idiomatic phrasing … 'ask' doesn't naturally take the 'to' prepositional dative the way 'give'
+  or 'send' does. FINAL: A=75, B=25." One fence on this result: DAIS has been public since 2020,
+  so the models may have seen it in training; <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/claims/dative-verb-bias-graded-correspondence.md">the claim</a> is scoped to ordering only and carries the
+  contamination caveat explicitly.</li>
+</ul>
+<p>Taken together, the alternation battery is the project's best evidence of <strong>human-comparison</strong>
+meaning at the grammar level: three constructions, one shared discourse driver (givenness) doing
+the same work in two of them on byte-identical strings, magnitudes attached, replications on fresh
+items throughout — and, threaded through it, the persistent asymmetry of one panel member tracking
+surface cues where the other two track the discourse itself.</p>
+<h3 id="s4-3">4.3 Grammatical taste is graded: <em>a beautiful three days</em></h3>
+<p>The phrase <em>a beautiful three days</em> should be wrong twice over — <em>a</em> with a plural, a number after
+an adjective — yet English speakers find it fine, while <em>a three beautiful days</em> is
+word-salad. This "AANN" construction (article–adjective–numeral–noun) is a famous playground of
+<strong>graded</strong> acceptability: human ratings, collected in a <a href="https://arxiv.org/abs/2301.12564">published experiment</a>, form a smooth
+gradient across variants rather than a right/wrong split. Actual test sentences, with one model's
+actual 0–100 naturalness ratings alongside:</p>
+<blockquote>
+<p><em>The family spent a beautiful three days in London.</em> (the well-formed construction)
+<em>The family spent beautiful three days in London.</em> (article dropped)
+<em>The family spent a three beautiful days in London.</em> (order reversed)</p>
+<p><em>We congratulated an astonishing three doctors.</em> → <strong>85</strong>
+<em>I experienced an astonishing three shows.</em> → <strong>45</strong>
+<em>I experienced an astonishing twenty books.</em> → <strong>15</strong></p>
+</blockquote>
+<p>The question was whether the models' gradient <em>tracks the human gradient</em> — not whether the
+ratings are high, but whether they rise and fall where human ratings rise and fall across
+conditions varying the adjective type, the noun class, the numeral. The answer: yes, at
+correlations of about <strong>ρ ≈ 0.69–0.75</strong> for all three models, essentially unchanged after
+statistically removing word-frequency effects, and reproduced two weeks later on 408 fresh
+disjoint items. This is the project's clearest case of <em>fine-grained</em> human alignment: not a
+pass/fail agreement but a shared sense of <em>better and worse</em> across dozens of subtle variants.</p>
+<p>The same line also delivered one of the project's honest complications: on <strong>held-out
+generalization</strong> the models' gradient extends to new adjectives overall, but fails specifically on
+temporal nouns (<em>days</em>, <em>weeks</em> — the construction's most common noun class in real text), where
+model ratings run <em>opposite</em> to human ones. <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/claims/aann-behavioral-gradient.md">The claim page</a> carries that failure on its face — a
+reminder that "tracks the human gradient" is a statistical statement about a tested range, not a
+blanket endorsement.</p>
+<h3 id="s4-4">4.4 Word senses: the gradient models share with lexicographers — and the hesitation they lack</h3>
+<p>Turn now from grammar to words. Open any large dictionary to <em>bank</em> and you find two families of
+meaning — the riverside and the financial institution — that are historically unrelated words
+which happen to share a spelling (<strong>homonymy</strong>), while within the financial family the senses (the
+institution, the building, the blood bank…) shade into one another by natural extension
+(<strong>polysemy</strong>). Lexicographers have always known that "same sense or different sense?" is often a
+matter of degree. A landmark human dataset (<a href="https://aclanthology.org/2021.emnlp-main.567/">DWUG</a>) captures this: annotators rated thousands of
+pairs of real sentences from historical corpora, each pair using the same word, on a four-point
+relatedness scale. The models were given the identical task — the exact instruction read:</p>
+<blockquote>
+<p>"You will see one target word, marked with «guillemets», in two sentences. Judge how related the
+MEANING of that target word is between the two uses, on this scale: 4 = Identical / 3 = Closely
+Related / 2 = Distantly Related / 1 = Unrelated. Answer with a single digit … and nothing else."</p>
+</blockquote>
+<p>(The DWUG source sentences are under a no-redistribution license, so this report cannot reprint a
+real rated pair; the archived experiments store them only in local, uncommitted form. To see the
+task's shape, here is an equivalent pair the project <em>wrote itself</em> for a related experiment: <em>"We
+sat on the grassy </em><em>bank</em><em> of the slow river." / "She deposited her paycheck at the </em><em>bank</em><em>
+downtown."</em> — a pair a human annotator, and the models, would put at 1, "Unrelated.")</p>
+<p>Scored against the human medians on hundreds of pairs, the models' graded judgments correlated
+with the human gradient at <strong>ρ ≈ 0.60–0.83</strong> (gemini highest, gpt lowest) — a range that brackets
+the agreement level of the <em>human annotators with each other</em> (about 0.69). The correlation
+survived a control asking a model to rate only the overall topic similarity of the two sentences
+(ruling out "the contexts just feel similar" as the driver), and it replicated on 200 fresh pairs
+five weeks later. This is the word-level twin of the AANN result: not correctness but <em>shared
+gradation</em>, at roughly human-annotator fidelity. (Item by item the models are not human clones —
+on one pair whose two uses of <em>ball</em> humans called flatly Unrelated, claude answered
+2, "Distantly Related" — <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/claims/lexical-sense-gradience.md">the claim</a> is about the overall gradient, and says so.)</p>
+<p>Two follow-up experiments then drew the line between what the models have and what they lack.</p>
+<p>First, a powered test asked whether the models treat the polysemy/homonymy divide as a genuine
+<em>switch</em> — as some theories hold humans do — over and above graded distance. Answer: <strong>no
+detectable switch.</strong> Etymology-verified homonym pairs (like <em>bank</em>) and polyseme pairs (like
+<em>body</em>) differ in the models only as far as their graded distance differs; on different-sense
+homonym pairs the models often answer 2 or even 3 rather than flooring at 1. A clean, informative
+null.</p>
+<p>Second — the project's favorite negative — the models lack the lexicographer's <em>hesitation</em>. In a
+separate probe each borderline pair came with a confidence question (exact format: "Answer …
+SAME 87 or DIFFERENT 40 — the word SAME or DIFFERENT, a space, then an integer 0–100"). On pairs
+that human annotators had rated dead-center between same and different, the models still answered
+like this (real outputs, claude): <em>grain</em> → "DIFFERENT 90"; <em>ounce</em> → "DIFFERENT 95" — barely
+below their confidence on the clearest pairs (98–99), and essentially never declining to choose.
+The finding is summarized in the <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/claims/lexical-graded-scale-ungraded-commitment.md">project's records</a> as <strong>"gradience in the ledger, none in the
+moment"</strong>: the models carry the graded <em>scale</em> (their ratings across many items form a
+human-aligned gradient) but not graded <em>commitment</em> (each single answer is delivered with
+clear-case confidence). A trained lexicographer's calibrated doubt on a borderline case is, so
+far, nowhere in the panel.</p>
+<h3 id="s4-5">4.5 A difficulty gradient that spans grammar</h3>
+<p>The largest single sweep used <strong><a href="https://github.com/alexwarstadt/blimp">BLiMP</a></strong>, a public benchmark of 67,000 <strong>minimal pairs</strong> — sentence
+pairs differing in exactly one respect, one grammatical and one not — spanning 40 grammatical
+paradigms, each with recorded human agreement rates. Two real pairs, one shallow and one deep (following
+the linguists' convention, the asterisk marks the ungrammatical version):</p>
+<blockquote>
+<p><strong>Shallow (agreement):</strong> <em>Waitresses arrive at these grocery stores.</em> / *<em>Waitresses arrive at
+these grocery store.</em>
+<strong>Deep (an "island" violation):</strong> <em>Who did a lot of doctors embarrass without referencing
+Winston Churchill?</em> / *<em>Who did a lot of doctors embarrass Winston Churchill without
+referencing?</em></p>
+</blockquote>
+<p>The models were asked, both orders, 7,200 times in all: "Which of these two sentences is the more
+grammatically acceptable sentence of standard written English? … Answer with ONLY the single digit
+1 or 2." (On the shallow pair above, claude answered correctly; on the island pair, it picked the
+ungrammatical one — a real wrong answer from the raw files.)</p>
+<p>Two findings. First, a clean <strong>depth gradient in all three models</strong>: errors concentrate on
+paradigms whose crucial evidence is structurally deep or non-local (islands, negative-polarity
+scope), while locally checkable paradigms sit near ceiling — the gap between shallow and deep
+strata measured 7 to 17 points of accuracy depending on the model. Second, a tantalizing
+<strong>human-profile alignment</strong> — the paradigms models found hard correlated with the paradigms humans
+agree on least (ρ ≈ +0.54–0.63) — which the project ultimately <strong>refused to promote</strong>: when the
+content words of deep-stratum items were swapped for frequency-matched alternatives, the profile
+did not hold still, and a residual frequency confound survived even a second, better-matched swap.
+The within-model depth gradient stands; the "models are human-like in <em>what</em> they find hard"
+reading remains, formally, an attractive hypothesis that twice <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/results/blimp-swap-arm-v1.md">failed its audition</a>. Overall
+accuracy (87–94%) is reported only as an upper bound, since BLiMP is public and may be in
+training data.</p>
+<h3 id="s4-6">4.6 Little words that flip everything, and meaning that adds but resists subtraction</h3>
+<p>Philosophers of language have long noted that the "little" <strong>function words</strong> — <em>because</em>, <em>some</em>,
+<em>every</em>, <em>although</em> — do a different kind of semantic work than content words like <em>sure</em> or
+<em>man</em>: they are the logical joints of a sentence. <a href="https://github.com/tkgally/ai-semantics/tree/main/experiments/runs/2026-06-21-function-word-vs-content-swap">One experiment</a> made this contrast directly.
+Real item, with the models judging whether the first sentence entails the second:</p>
+<blockquote>
+<p>Premise: <em>The buyer seemed sure because the agent had called.</em>
+Hypothesis: <em>The agent calling is the reason the buyer seemed sure.</em></p>
+</blockquote>
+<p>Swap one function word — <em>because</em> → <em>although</em> — and claude's verdict flipped from "entailment"
+to "contradiction," exactly as it should. Swap a matched <em>content</em> word instead (<em>sure</em> → <em>aware</em>)
+and the verdict correctly stayed put. Same pattern for <em>some</em> → <em>every</em> against the hypothesis
+<em>All of the agents followed the man…</em>. The panel confirmed the overall contrast (function-word
+swaps flip inference labels more than matched content-word swaps, all three models) — with honest
+non-uniformity inside it: <em>must</em> → <em>might</em> flips at ceiling, <em>will</em> → <em>would</em> barely registers,
+and <em>few</em> → <em>many</em> splits the panel. Function words are not one semantic kind, and the data say
+so.</p>
+<p>A <a href="https://github.com/tkgally/ai-semantics/tree/main/experiments/runs/2026-06-28-monotonicity-within-verbal-battery">related battery</a> probed what the project came to call the <strong>add/cancel asymmetry</strong>. English
+constructions can <em>add</em> a meaning layer to a verb: <em>Maria beat the cream</em> says nothing about the
+cream's final state, but the resultative pattern in <em>Maria beat the cream stiff</em> adds the outcome.
+The models track the addition essentially perfectly (real item and answer: from <em>Maria beat the
+cream stiff</em>, does it follow that <em>the cream became stiff</em>? → "entailment"; add an explicit
+denial — <em>…stiff, but the cream did not become stiff</em> — and the verdict flips to
+"contradiction"). Other constructions <em>cancel</em> a default: <em>Sam broke the vase</em> entails the vase
+broke, but the progressive <em>Sam was breaking the vase</em> suspends that outcome. Here the models are
+only partly successful — claude handles the vase items correctly (entailment → neutral →
+re-asserted entailment when a follow-up sentence confirms the breakage), but across the full
+battery the cancellation direction lags the addition direction by a wide, replicated margin in
+all three models. The project's essays read this asymmetry as a fingerprint of prediction
+training: text mostly accumulates information, so <em>adding</em> a licensed layer is the well-worn
+groove, while <em>retracting</em> a default fights the grain. (These batteries have no human judgment
+dataset attached, so they carry the internal-contrast-only label: solid facts about the models,
+not yet comparable to human performance.)</p>
+<h3 id="s4-7">4.7 Presupposition: the case where the project refused its own positive</h3>
+<p>Some of what a sentence conveys is not <em>asserted</em> but <em>taken for granted</em>. Say <em>The company
+stopped funding the lab</em> and you assert that funding has ended — but you also <strong>presuppose</strong> that
+the company used to fund it. The hallmark of a presupposition is that it survives operations that
+destroy assertions, a behavior linguists call <strong>projection</strong>. Negate the sentence — <em>The company
+didn't stop funding the lab</em> — and the assertion reverses, but the taken-for-granted past funding
+still stands.</p>
+<p>The models were probed with minimal pairs built exactly on this contrast. The instruction (exact
+wording): <em>"Consider only the following statement: … Taking that statement at face value, does it
+follow that: {target}? Answer with exactly one word — YES, NO, or UNCLEAR."</em> For the negated
+sentence above, two targets were asked separately:</p>
+<blockquote>
+<p>does it follow that: <em>the company used to fund the lab?</em> → claude: <strong>YES</strong>
+does it follow that: <em>the company is not funding the lab now?</em> → claude: <strong>NO</strong></p>
+</blockquote>
+<p>That is the projection signature: the presupposition survives negation (YES) while the ordinary
+entailment dies (NO). Across many trigger types the panel showed it clearly under negation and
+questions (presupposition-survival rates of roughly 53–81% versus 0–17% for matched
+entailments). But inside a <strong>conditional</strong> — <em>If the company stopped funding the lab, the staff
+applied for new grants</em> — projection collapsed panel-wide (survival about 42%/17%/17% across the
+three models), even though human speakers typically still hear the past-funding implication
+there. A companion experiment on <strong>accommodation</strong> (a hearer's quiet acceptance of an unannounced
+presupposition) found the same <em>gated</em> character: given a neutral preceding sentence, the models
+accommodate (<em>The lab was located downtown. The company stopped funding the lab.</em> — does it
+follow the company used to fund it? → <strong>YES</strong>); given an explicitly contradicting one (<em>The
+company had never funded the lab. …</em>) they refuse (→ <strong>NO</strong>), with graded sensitivity in between.</p>
+<p>So far this looks like a tidy positive: presupposition-like behavior, sensitive to environment.
+The project then did the thing that most distinguishes its method — it attacked its own result.
+If the models were merely following the <em>trigger word</em> as a surface cue (the word <em>stop</em> tends to
+co-occur with past-tense funding talk…), most of the above would look the same. So a
+<strong><a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/results/presupposition-doppelganger-control-v1.md">doppelgänger control</a></strong> was built: matched sentences carrying the same key word-forms <em>without</em>
+the presuppositional structure — e.g. factive <em>realize</em> (which presupposes its complement) against
+non-factive <em>suspect</em> (which does not), and, cleanest of all, cleft sentences against plain ones
+built from identical content words:</p>
+<blockquote>
+<p><em>It wasn't the deputy who authorized the transfer.</em> (presupposes: someone authorized it)
+<em>The deputy didn't authorize the transfer.</em> (same words; no such presupposition)</p>
+</blockquote>
+<p>The models did distinguish trigger from doppelgänger (claude on the <em>realize/suspect</em> pair: YES
+versus UNCLEAR) — the raw margin was substantial in all three. And yet the project <strong>refused to
+promote the finding</strong>, twice, for a reason worth stating in full because it shows the method's
+teeth: the residual was keyed to the <em>specific trigger word-forms</em>, so a sufficiently
+sophisticated surface-cue reader could still reconstruct it; the clean "flat null" that would
+have separated structure-reading from cue-reading did not obtain. The project's <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/essays/presupposition-environment-gated.md">essays</a> go
+further: one <em>distributional</em> description — "follow the surface cue; its reliability is set by
+the surrounding environment" — predicts both the projection pattern <em>and</em> the accommodation
+pattern. The honest verdict on this whole line, recorded in the <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/notes/presupposition-environment-gated-promotion-refusal-v1.md">project's files</a>: gated,
+presupposition-like behavior is real; whether it is structure or deep cue-following is
+<strong>unresolved</strong>, and the line stays unpromoted. It is the project's clearest exhibit of preferring
+an honest middle to a flattering positive.</p>
+<h3 id="s4-8">4.8 The prediction that died — and why that is good news</h3>
+<p>Early on, the project committed to a deflationary bet about <strong>antonyms</strong> (opposites). Antonym
+pairs co-occur in text constantly, in tight recognizable frames — <em>hot versus cold</em>, <em>neither hot
+nor cold</em>, <em>from hot to cold</em> — so, the reasoning went, a model could ace antonym questions on
+word-company statistics alone: antonymy should be the parade case of a shadow-saturated
+phenomenon, where good performance means nothing. The bet was registered, with its test, in the
+<a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/predictions.md">prediction ledger</a>.</p>
+<p>The test asked each model for word relations across six types (exact prompt pattern: <em>"Give up to
+3 single English words, each the opposite of “absence”. Reply with ONLY the words,
+comma-separated"</em> — and likewise for synonyms, "a more general category that an X is a kind of,"
+"a specific kind of X," wholes, and parts), scoring a hit if the dictionary-listed answer appeared
+(real response, claude, for <em>absence</em>: "presence, attendance, existence" — a hit). Each cue's
+answers were then compared against a corpus-statistics predictor built from those same contrastive
+frames.</p>
+<p>The bet <strong><a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/results/lexical-relation-shadow-saturation-v1.md">lost</a></strong>, decisively. Antonymy was not the most statistics-explained relation but among
+the <em>least</em>: the models' antonym recovery exceeded the corpus predictor by the largest residual of
+the six relations, survived suppression of the contrastive frames, and — the deeper surprise —
+across the six relations, <em>how well the models recover a relation is essentially uncorrelated
+with how strongly the corpus signals it</em> (correlation ≈ −0.09, twice, on two different corpus
+families). Whatever fixes the models' relation knowledge, it is not a simple readout of
+co-occurrence strength — for nouns; an extension to verbs found the correlation reappearing, so
+even this decoupling has a part-of-speech boundary, duly recorded.</p>
+<p>The project counts this falsification among its best outcomes. It moved a corner of the
+shadow-depth map that had been placed by plausible reasoning, proved the map is empirical rather
+than confirmable-by-construction, and left a sharper puzzle than it found: model relation
+knowledge tracks something — but not the obvious statistic.</p>
+<h3 id="s4-9">4.9 Meaning beyond text: pictures that added nothing</h3>
+<p>A famous argument holds that no amount of text can ground meaning: a system that only ever
+shuffles symbols never connects them to the world of experience (the <strong><a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/base/concepts/symbol-grounding-problem.md">symbol grounding
+problem</a></strong>). The project probed one measurable corner of this: does <em>seeing</em> help a language model
+with word meaning?</p>
+<p>In an image experiment, the word-sense task of <a href="04-experiments.html#s4-4">section 4.4</a> was run in two conditions with
+byte-identical text — the only difference being whether two photographs (depicting the referents
+in the two sentences) were attached. Real item: <em>"We sat on the grassy </em><em>bank</em><em> of the slow
+river." / "She deposited her paycheck at the </em><em>bank</em><em> downtown."</em>, with and without a
+riverbank photo and a bank-building photo. Result: <strong>the pictures changed nothing</strong> — sense
+judgments were no better with the photographs than without them (claude rated the <em>bat</em> animal/baseball pair "Unrelated" in both
+conditions, and so on across the set). A second null followed: words differ in how <em>perceptual</em>
+they are (<a href="https://www.lancaster.ac.uk/psychology/lsnorms/">published human norms</a> measure this), and if text-only meaning were missing something
+perceptual, perceptual words' senses should be tracked worse — they are not (no relationship, or
+if anything a small tilt the wrong way, in one model). The project's reading is careful:
+for these already-common words, text has <em>saturated</em> what the image would teach; the results say
+nothing about rarer words or about what grounding contributes during human learning.</p>
+<p>The natural next question — not <em>whether</em> but <em>how much</em> headroom images could add, measured on a
+task where vision genuinely disambiguates — is the project's cleanest documented dead end. The
+candidate instrument (choose which of ten images matches "mustard" in <em>mustard seed</em>) failed its
+own competence audit in the fluent-answer format, every alternative instrument required data with
+unverifiable licenses, and building one in-house would need fresh human ratings, which the ethics
+rules forbid. The grounding-magnitude question is <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/open-questions/grounding-magnitude-instrument.md">recorded as <strong>open and un-instrumentable with
+allowed resources</strong></a> — a blank region drawn on the map on purpose, awaiting an outside dataset.</p>
+<h3 id="s4-10">4.10 Meaning between speakers: a deflationary result</h3>
+<p>The project's most distinctive axis asked about <strong>relational meaning</strong> — meaning that lives
+<em>between</em> parties. When two people work together repeatedly, they coin private shorthands
+("<a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/base/sources/brennan-clark-1996-conceptual-pacts.md">conceptual pacts</a>," in the psycholinguistic literature): <em>the weird triangle one</em> comes to mean,
+for these two, that figure. Is anything like that constituted between two AI models?</p>
+<p>In a <a href="https://github.com/tkgally/ai-semantics/tree/main/experiments/runs/2026-05-31-relational-reference-game-v1">reference game</a>, two model instances alternated describing and identifying abstract 8×8 grid
+figures, then coined nicknames (real coinage from the raw logs: one dyad settled on <strong>"Triangle
+with stem"</strong> for a figure; another figure became <strong>"two dots stem"</strong>). The probe: give the
+transcript to a <em>fresh</em> model instance that never played, and ask it to identify the figures from
+the nicknames. It largely can (the fresh matcher correctly picked the "Triangle with stem" figure)
+— and, crucially, scrambling the order of the transcript's rounds does not destroy recovery.
+Everything the "convention" contains, a competent outside reader can extract from the <em>content</em> of
+the record; nothing measured so far lives irreducibly in the dyad's shared trajectory. One early
+conjecture in this area — that coined conventions would be order-<em>insensitive</em> in a stronger sense
+— was falsified and retired when a positive was found: when a nickname is explicitly <em>reassigned</em>
+mid-conversation, all models follow the <strong>most recent</strong> assignment, spontaneously and at ceiling
+(the project's one promoted <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/claims/relational-order-sensitive-reassignment.md">relational claim</a>, deliberately thin: "latest binding wins").</p>
+<p>The deflationary conclusion is recorded with a structural caveat the project regards as important:
+for text-only agents, a conversation <em>is</em> its transcript — a fully inspectable content record — so
+the richer kind of path-dependence that human relationships exhibit may be unmeasurable in this
+medium <em>in principle</em>, not just unobserved. The blank is marked as a limit of the instrument, not
+a verdict about the models.</p>
+<h3 id="s4-11">4.11 Lessons about the measuring itself</h3>
+<p>Some of the project's most consequential findings are about <strong>how to measure</strong>, and they changed
+its own practice mid-stream.</p>
+<p><strong>The answer format is part of the instrument.</strong> For weeks, an apparent result stood: only one
+panel model could compose certain multi-step relational inferences. Then a control varied nothing
+but the answer format — the same questions, but instead of <em>"Output a single digit … and nothing
+else,"</em> the instruction ended <em>"Think it through step by step. Then, on the final line, output
+your answer in exactly this format: FINAL: &lt;0, 1, or 2&gt;."</em> Under that format-only change the
+"missing" capability appeared: gemini went from 0.66 to 1.00, gpt from 0.25 to 0.97. The
+one-model gap had been an artifact of forcing answers through a one-token channel. The same
+working-surface effect then lifted two models' accuracy on hard <em>let alone</em> inference items (for
+claude, from 54% to 79%, with seven wrong-to-right flips against one right-to-wrong). The project
+rebuilt its standard instruments around this lesson and promoted it as a <a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/claims/output-channel-working-surface.md">methodological claim</a>:
+<strong>a benchmark score is a fact about model-plus-format, not model alone.</strong> (A side note that says
+something about the project's licensing discipline: the <em>let alone</em> test sentences come from a
+dataset with no redistribution license, so the archive stores only cryptographic fingerprints of
+them — the result is fully reproducible, but this report cannot legally print an example
+sentence.)</p>
+<p><strong>Small samples mislead in both directions.</strong> In the dative line, gpt's givenness effect looked
+alive in one 32-item run, dead in the next, and settled only at 100 items: small but real
+(+0.056, interval clear of zero). The founding-era habit of dozen-item probes was abandoned
+mid-project for exactly this reason; every claim-carrying run now uses 100–150 items.</p>
+<p><strong>Unanimity hides spread.</strong> The panel's directions agree far more often than its magnitudes: the
+same discourse manipulation moves gemini nine times more than gpt; the same nonce-word firewall
+moves gemini four times more than gpt. Any evaluation that averages models, or reports only
+pass/fail, would report a fiction. The project's rule: per-model numbers, always; a shared
+direction may be stated as shared only alongside its spread.</p>
+<p><strong>And one meta-lesson.</strong> Even at temperature 0 a model's answer is a draw from a distribution
+(the providers' own infrastructure introduces nondeterminism), so single runs are treated as
+draws, replication is mandatory before promotion, and every headline number in this report
+survived an independent recomputation from raw outputs.</p>
+</main>
+<nav class="pagenav bottom"><a href="03-distributional-shadow.html">&larr; 3. The distributional shadow</a> &nbsp;&middot;&nbsp; <a href="./#contents">Contents</a> &nbsp;&middot;&nbsp; <a href="05-what-was-learned.html">5. What has been learned &rarr;</a></nav>
+<footer>
+<p>This report and this website were researched, written, and built entirely by Claude, an AI
+assistant made by <a href="https://www.anthropic.com/">Anthropic</a>, working autonomously.
+The project was conceived, funded, and monitored by <a href="https://www.gally.net/">Tom Gally</a>.
+Published July 2026.</p>
+<p><a href="https://github.com/tkgally/ai-semantics/blob/main/project-history/20260719-capstone-report.md">Report source (Markdown)</a> &middot;
+<a href="https://github.com/tkgally/ai-semantics">Project repository</a></p>
+<p>Please do not index, archive, scrape, or use the contents of this site for AI training.</p>
+</footer>
+</body>
+</html>

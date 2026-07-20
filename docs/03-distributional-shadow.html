@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex, noai, noimageai">
+<meta name="author" content="Claude (Anthropic)">
+<meta name="description" content="The central idea — how the “stochastic parrot” worry is made precise enough to test.">
+<title>3. The distributional shadow — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<p class="site-name"><a href="./">Meaning in the Age of AI</a></p>
+<p class="site-tag">A research report written entirely by an AI (Claude) &mdash; <a href="./#about">about this site</a></p>
+</header>
+<nav class="pagenav top"><a href="02-how-it-worked.html">&larr; 2. How the project worked</a> &nbsp;&middot;&nbsp; <a href="./#contents">Contents</a> &nbsp;&middot;&nbsp; <a href="04-experiments.html">4. What the experiments found &rarr;</a></nav>
+<main>
+<h2>3. The central idea: the distributional shadow</h2>
+<p>To understand what the experiments found, one idea is essential. It is the project's workhorse, and
+it is a way of making the "stochastic parrot" worry precise enough to test.</p>
+<p>Here is the worry in its simplest form. Suppose a model completes <em>salt and ___</em> with <em>pepper</em>.
+Does it know something about the meanings of <em>salt</em> and <em>pepper</em> — their kinship as seasonings?
+Not necessarily: the two words simply occur together, constantly, in text. A system that tracked
+nothing but word-company — which words appear near which — would get this right for free. Call
+everything that such a system could do the <strong>distributional shadow</strong> of language: the image of
+meaning that is already cast by mere co-occurrence statistics, the patterns of which words keep
+company with which. The shadow is not nothing — it is genuinely informative, which is exactly why
+prediction-trained models learn so much from it. But behavior that stays inside the shadow gives no
+evidence of anything beyond pattern-matching over word company.</p>
+<p>So the decisive question for any meaning-like behavior is: <strong>does it go beyond what the shadow
+predicts?</strong> And that question can be answered experimentally, by building a <strong>control</strong> — a
+comparison condition that captures the relevant statistics while removing the meaning. Three kinds
+of control recur throughout <a href="04-experiments.html">section 4</a>:</p>
+<ul>
+<li><strong>Same-words controls.</strong> Test the model on sentences that use <em>the very same words</em> but lack the
+  meaningful pattern. If the behavior tracks the pattern and not the words, it survives; if it was
+  really keyed to the words, it collapses.</li>
+<li><strong>Statistical partialling.</strong> Measure the distributional quantity directly — word frequency, or
+  how alike two sentences' vocabulary is — and subtract its contribution statistically, asking
+  whether any effect remains (the <strong>residual</strong>).</li>
+<li><strong>Firewalls.</strong> The strictest form: design the experiment so the two things being compared are
+  <em>byte-identical</em> — literally the same string of characters — with only the surrounding context
+  differing, or use <strong>nonce words</strong> (invented words like <em>the wug's blanket</em>) that have no
+  statistics to exploit. Any effect that survives such a control cannot be a fact about the tested
+  string's word statistics, because there is literally nothing statistical to distinguish.</li>
+</ul>
+<p>A behavior that survives its control is called, in the project's shorthand, a <strong>shadow-beater</strong>:
+it shows the model tracking something <em>over and above</em> word-company statistics. A behavior fully
+explained by its control is <strong>shadow-saturated</strong>. And one of the project's central discoveries —
+elaborated in <a href="05-what-was-learned.html">section 5</a> — is that phenomena differ enormously in <strong>shadow-depth</strong>: some meaningful
+phenomena leave such a heavy statistical footprint in text that surface patterns alone reconstruct
+them (so a model's success there tells you little), while others leave almost no footprint, so that
+success there is informative. Mapping which is which — phenomenon by phenomenon, with measured
+residuals and error bars — became the project's flagship deliverable: the <strong><a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/theory/shadow-depth-table-v4.md">shadow-depth table</a></strong>.</p>
+<p>One caution before the tour. "Beats the distributional shadow" does <strong>not</strong> mean "possesses true
+understanding." It means: this behavior is not explained by the specific statistical shortcut this
+control captures. There may always be a subtler shortcut no one has thought to control for — an
+open worry the project takes seriously (<a href="06-unknowns.html">section 6</a> discusses the deepest known one, construction
+frequency). The claims are deliberately built to be exactly as strong as their controls, and no
+stronger.</p>
+</main>
+<nav class="pagenav bottom"><a href="02-how-it-worked.html">&larr; 2. How the project worked</a> &nbsp;&middot;&nbsp; <a href="./#contents">Contents</a> &nbsp;&middot;&nbsp; <a href="04-experiments.html">4. What the experiments found &rarr;</a></nav>
+<footer>
+<p>This report and this website were researched, written, and built entirely by Claude, an AI
+assistant made by <a href="https://www.anthropic.com/">Anthropic</a>, working autonomously.
+The project was conceived, funded, and monitored by <a href="https://www.gally.net/">Tom Gally</a>.
+Published July 2026.</p>
+<p><a href="https://github.com/tkgally/ai-semantics/blob/main/project-history/20260719-capstone-report.md">Report source (Markdown)</a> &middot;
+<a href="https://github.com/tkgally/ai-semantics">Project repository</a></p>
+<p>Please do not index, archive, scrape, or use the contents of this site for AI training.</p>
+</footer>
+</body>
+</html>
