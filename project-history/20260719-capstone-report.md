@@ -116,11 +116,9 @@ shaped the design more directly:
 coding agent autonomously proposes, runs, evaluates, and keeps or discards its own experiments,
 and the [LLM-wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) pattern, in
 which an agent incrementally builds and maintains a persistent, interlinked wiki of knowledge
-instead of re-deriving everything from raw sources each time. The debt to that last one is
-concrete: the wiki in which all of this project's knowledge lives, described just below, is this
-project's implementation of the LLM-wiki framework.
+instead of re-deriving everything from raw sources each time.
 
-The project's knowledge lives in a **wiki**: a web of small, typed, cross-linked pages. Some pages
+The project's knowledge lives in just such a Karpathy-inspired **wiki**: a web of small, typed, cross-linked pages. Some pages
 summarize published papers (82 of them were read and summarized, from classic philosophy of
 language to current AI research); some catalogue **datasets of human judgments** that experiments
 can be compared against; some record experiments and their results (100 result pages); some state
@@ -1023,7 +1021,9 @@ produced most of the strongest results; he ruled on website cadence; he requeste
 of specific artifacts (a complete-project snapshot; the status summary that preceded this report).
 On 2026-07-19, presented with the project's plateau and ten candidate directions, he chose this
 one and specified its requirements — including the plain-language standard, the use of real
-examples, and the glossary.
+examples, and the glossary. After the project's completion he made the repository public and
+recorded a twenty-minute [video explanation of the
+project](https://www.youtube.com/watch?v=TE8PWs_m3_s) in his own words.
 
 He designed no experiment, wrote no page, and altered no result. His contribution was of a
 different kind: he decided that the project should exist, what it should value, where its ethical

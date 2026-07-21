@@ -16,6 +16,7 @@ Claude and intended for readers with no background in linguistics or philosophy:
 
 - **Website:** <https://tkgally.github.io/ai-semantics/> (served from `docs/`)
 - **Single-document source:** [`project-history/20260719-capstone-report.md`](project-history/20260719-capstone-report.md)
+- **Video:** [Video explanation of project by Tom Gally](https://www.youtube.com/watch?v=TE8PWs_m3_s) (YouTube, 20 minutes)
 
 The report covers what was done, what was learned, what remains unknown or undecidable, the
 implications, reflections on the significance of AI-conducted research, and possible future
